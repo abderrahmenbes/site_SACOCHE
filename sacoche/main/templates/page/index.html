@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <title>sacoche</title>
+    <link rel="stylesheet" href="{% static 'css/sacoche.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class="header">
+      <h1><i class="fa fa-list-ol"></i> Information de livraison</h1>
+      <button class="btn print-btn"><i class="fa fa-print"></i> Sheet</button>
+    </div>
+  </body>
+  <div class="table-section">
+    <table>
+        
+      <thead>
+        <tr>
+          
+          <th>nam de client</th>
+          <th>numero de telephone</th>
+          <th>l'adresse</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      {% for x in ord  %}
+      <tbody>
+        <tr>
+            
+          
+          <td></i>{{x.name}}</td>
+          <td> {{x.phone}}</td>
+          <td>{{x.adresse}}</td>
+          <td>{{x.prix}}</td>
+          
+    {% endfor %}
+     
+      
+    </table>
+  </div>
+</html>
